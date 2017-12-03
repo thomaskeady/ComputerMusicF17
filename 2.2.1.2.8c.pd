@@ -1,0 +1,6 @@
+#N canvas 940 349 500 452 10;
+#X obj 144 161 expr $f1 * $f1;
+#X obj 151 203 print;
+#X floatatom 146 120 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
