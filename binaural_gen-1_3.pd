@@ -10,41 +10,41 @@
 #X floatatom 24 691 5 0 0 0 - - -;
 #X obj 275 443 select 0 1 2 3 4 5 6 7;
 #X obj 281 473 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 0;
 #X obj 16 205 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 249 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 1;
+-1 -1 3200 1;
 #X obj 234 307 f;
 #X obj 249 125 loadbang;
 #X obj 88 324 mtof;
 #X msg 45 324;
 #X obj 282 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 1;
+-1 -1 8900 1;
 #X obj 267 307 f;
 #X obj 282 125 loadbang;
 #X obj 313 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7200 1;
+-1 -1 5500 1;
 #X obj 298 306 f;
 #X obj 313 125 loadbang;
 #X obj 346 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7300 1;
+-1 -1 2100 1;
 #X obj 331 307 f;
 #X obj 346 125 loadbang;
 #X obj 381 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7300 1;
+-1 -1 12100 1;
 #X obj 366 307 f;
 #X obj 381 125 loadbang;
 #X obj 414 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7200 1;
+-1 -1 6700 1;
 #X obj 399 307 f;
 #X obj 414 125 loadbang;
 #X obj 447 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 1;
+-1 -1 7500 1;
 #X obj 431 307 f;
 #X obj 447 125 loadbang;
 #X obj 480 168 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7000 1;
+-1 -1 6000 1;
 #X obj 465 307 f;
 #X obj 480 125 loadbang;
 #X obj 35 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -61,12 +61,15 @@
 #X text 13 180 Start/stop;
 #X text 51 207 Metronome;
 #X floatatom 93 361 5 0 0 0 - - -;
-#X floatatom 171 263 5 0 0 0 - - -;
+#X floatatom 171 262 5 0 0 0 - - -;
 #X obj 131 397 +;
 #X floatatom 132 421 5 0 0 0 - - -;
 #X obj 122 471 osc~;
 #X obj 162 470 osc~;
 #X obj 143 524 dac~;
+#X text 170 242 best offset;
+#X obj 123 496 *~ 0.3;
+#X obj 160 494 *~ 0.3;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
@@ -137,5 +140,7 @@
 #X connect 51 0 52 1;
 #X connect 52 0 53 0;
 #X connect 53 0 55 0;
-#X connect 54 0 56 0;
-#X connect 55 0 56 1;
+#X connect 54 0 58 0;
+#X connect 55 0 59 0;
+#X connect 58 0 56 0;
+#X connect 59 0 56 1;
