@@ -10,39 +10,39 @@
 #X floatatom 24 691 5 0 0 0 - - -;
 #X obj 390 597 select 0 1 2 3 4 5 6 7;
 #X obj 396 627 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 7;
+-1 -1 2;
 #X obj 15 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 364 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8255 1;
+-1 -1 6032 1;
 #X obj 350 460 f;
 #X obj 699 260 loadbang;
 #X obj 397 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6350 1;
+-1 -1 6032 1;
 #X obj 382 461 f;
 #X obj 732 260 loadbang;
 #X obj 428 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6985 1;
+-1 -1 6032 1;
 #X obj 413 460 f;
 #X obj 763 260 loadbang;
 #X obj 461 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6985 1;
+-1 -1 6032 1;
 #X obj 446 461 f;
 #X obj 796 260 loadbang;
 #X obj 496 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6667 1;
+-1 -1 6032 1;
 #X obj 481 461 f;
 #X obj 831 260 loadbang;
 #X obj 529 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7302 1;
+-1 -1 6032 1;
 #X obj 514 461 f;
 #X obj 864 260 loadbang;
 #X obj 562 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6667 1;
+-1 -1 6032 1;
 #X obj 546 461 f;
 #X obj 897 260 loadbang;
 #X obj 595 300 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5397 1;
+-1 -1 6032 1;
 #X obj 580 461 f;
 #X obj 930 260 loadbang;
 #X obj 35 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -50,11 +50,11 @@
 #X msg 35 461 0;
 #X text 12 119 Start/stop;
 #X text 50 146 Metronome;
-#X obj 324 691 osc~;
-#X obj 364 690 osc~;
-#X obj 345 744 dac~;
-#X obj 325 716 *~ 0.3;
-#X obj 371 717 *~ 0.3;
+#X obj 421 687 osc~;
+#X obj 461 686 osc~;
+#X obj 442 740 dac~;
+#X obj 422 712 *~ 0.3;
+#X obj 468 713 *~ 0.3;
 #X obj 247 477 mtof;
 #X floatatom 105 225 5 0 0 0 - - -;
 #X text 100 207 Base freq;
@@ -75,8 +75,8 @@
 #X floatatom 230 625 5 0 0 0 - - -;
 #X obj 26 720 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 293 589 5 0 0 0 - - -;
-#X floatatom 313 609 5 0 0 0 - - -;
+#X floatatom 293 608 5 0 0 0 - - -;
+#X floatatom 314 588 5 0 0 0 - - -;
 #X msg 699 281 30;
 #X floatatom 595 439 5 0 0 0 - - -;
 #X floatatom 364 437 5 0 0 0 - - -;
@@ -132,6 +132,15 @@
 #X obj 441 191 spigot;
 #X obj 539 191 spigot;
 #X obj 490 191 spigot;
+#X obj 671 524 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4100 1;
+#X obj 706 524 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3100 1;
+#X floatatom 671 660 5 0 0 0 - - -;
+#X floatatom 706 659 5 0 0 0 - - -;
+#X text 569 587 Left ear volume;
+#X text 736 587 right ear volume;
+#X text 607 496 Warning! Can cause clipping!;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
@@ -339,3 +348,7 @@
 #X connect 115 0 94 0;
 #X connect 116 0 88 0;
 #X connect 117 0 95 0;
+#X connect 118 0 120 0;
+#X connect 119 0 121 0;
+#X connect 120 0 43 1;
+#X connect 121 0 44 1;
