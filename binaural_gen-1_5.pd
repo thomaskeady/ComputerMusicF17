@@ -8,47 +8,47 @@
 #X floatatom 24 610 5 0 0 0 - - -;
 #X obj 24 650 mod 8;
 #X floatatom 24 691 5 0 0 0 - - -;
-#X obj 325 444 select 0 1 2 3 4 5 6 7;
-#X obj 331 474 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+#X obj 334 515 select 0 1 2 3 4 5 6 7;
+#X obj 340 545 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 7;
 #X obj 16 83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
-#X obj 299 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3600 1;
-#X obj 284 308 f;
-#X obj 299 126 loadbang;
-#X obj 332 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3600 1;
-#X obj 317 308 f;
-#X obj 332 126 loadbang;
-#X obj 363 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4100 1;
-#X obj 348 307 f;
-#X obj 363 126 loadbang;
-#X obj 396 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3700 1;
-#X obj 381 308 f;
-#X obj 396 126 loadbang;
-#X obj 431 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3300 1;
-#X obj 416 308 f;
-#X obj 431 126 loadbang;
-#X obj 464 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3400 1;
-#X obj 449 308 f;
-#X obj 464 126 loadbang;
-#X obj 497 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3500 1;
-#X obj 481 308 f;
-#X obj 497 126 loadbang;
-#X obj 530 169 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 308 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 700 1;
+#X obj 293 379 f;
+#X obj 308 197 loadbang;
+#X obj 341 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1100 1;
+#X obj 326 379 f;
+#X obj 341 197 loadbang;
+#X obj 372 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1400 1;
+#X obj 357 378 f;
+#X obj 372 197 loadbang;
+#X obj 405 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2300 1;
+#X obj 390 379 f;
+#X obj 405 197 loadbang;
+#X obj 440 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2500 1;
+#X obj 425 379 f;
+#X obj 440 197 loadbang;
+#X obj 473 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2900 1;
+#X obj 458 379 f;
+#X obj 473 197 loadbang;
+#X obj 506 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3200 1;
-#X obj 515 308 f;
-#X obj 530 126 loadbang;
+#X obj 490 379 f;
+#X obj 506 197 loadbang;
+#X obj 539 240 vsl 15 128 25 65 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6500 1;
+#X obj 524 379 f;
+#X obj 539 197 loadbang;
 #X obj 35 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 35 461 0;
-#X msg 299 147 71;
+#X msg 308 218 71;
 #X text 13 58 Start/stop;
 #X text 51 85 Metronome;
 #X obj 304 654 osc~;
@@ -56,38 +56,44 @@
 #X obj 325 707 dac~;
 #X obj 305 679 *~ 0.3;
 #X obj 351 680 *~ 0.3;
-#X msg 332 147 70;
-#X msg 363 147 69;
-#X msg 396 147 68;
-#X msg 431 147 67;
-#X msg 464 147 66;
-#X msg 497 147 65;
-#X msg 530 147 64;
-#X obj 170 323 mtof;
-#X text 277 61 have to limit these to freqs that cause binaural beat
+#X msg 341 218 70;
+#X msg 372 218 69;
+#X msg 405 218 68;
+#X msg 440 218 67;
+#X msg 473 218 66;
+#X msg 506 218 65;
+#X msg 539 218 64;
+#X obj 191 395 mtof;
+#X text 286 132 have to limit these to freqs that cause binaural beat
 ;
 #X floatatom 114 197 5 0 0 0 - - -;
 #X text 109 179 Base freq;
-#X obj 83 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 83 163 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 208 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 208 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 207 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 220 238 loadbang;
 #X text 83 133 Binaural (on) monaural (off);
 #X text 226 214 comment;
-#X obj 231 390 spigot;
-#X floatatom 181 355 5 0 0 0 - - -;
-#X obj 152 402 +;
-#X obj 109 443 spigot;
-#X obj 159 443 spigot;
-#X floatatom 109 466 5 0 0 0 - - -;
-#X floatatom 160 467 5 0 0 0 - - -;
+#X obj 245 466 spigot;
+#X floatatom 195 431 5 0 0 0 - - -;
+#X obj 166 478 +;
+#X obj 123 519 spigot;
+#X obj 173 519 spigot;
+#X floatatom 123 542 5 0 0 0 - - -;
+#X floatatom 174 543 5 0 0 0 - - -;
 #X obj 26 720 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 223 431 5 0 0 0 - - -;
-#X floatatom 243 451 5 0 0 0 - - -;
+#X floatatom 237 507 5 0 0 0 - - -;
+#X floatatom 257 527 5 0 0 0 - - -;
+#X floatatom 403 161 5 0 0 0 - - -;
+#X obj 399 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 508 162 5 0 0 0 - - -;
+#X obj 499 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
@@ -171,3 +177,7 @@
 #X connect 70 0 55 0;
 #X connect 71 0 41 0;
 #X connect 72 0 42 0;
+#X connect 73 0 24 0;
+#X connect 74 0 73 0;
+#X connect 75 0 33 0;
+#X connect 76 0 75 0;
